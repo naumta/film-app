@@ -1,0 +1,38 @@
+.film-search-container {
+  width: 30%;
+  margin: 10px auto;
+  border: 1px solid rgb(72, 162, 72);
+}
+
+.film-search-title, .film-search-type {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.film-search-title h2, .film-search-type h2 {
+  width: 10%;
+  color: rgb(227, 95, 7);;
+  margin: 10px;
+}
+.example-full-width, .type-form {
+  width: 70%;
+  height: 45px;
+  margin: 15px;
+}
+
+.film-search-container button {
+  width:80%;
+  font-size: 1.3em;
+  color: rgb(227, 95, 7);
+  background-color: rgb(135, 243, 135);
+  margin: 20px;
+  margin-left: 40px;
+
+  &:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+}

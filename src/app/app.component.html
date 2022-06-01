@@ -1,1 +1,30 @@
-<app-angular-material-example></app-angular-material-example>
+<!-- <app-angular-material-example></app-angular-material-example> -->
+<div class="film-search-container">
+
+  <div class="film-search-title">
+    <h2>Title:</h2>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Film name</mat-label>
+      <input matInput placeholder="Ex. Lion" value="" [(ngModel)]="filmInputValue">
+    </mat-form-field>
+
+  </div>
+
+  <div class="film-search-type">
+    <h2>Type:</h2>
+
+    <mat-form-field class="type-form" appearance="fill">
+      <mat-label>Film type</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let type of types" [value]="type.value">
+          {{type.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <button mat-raised-button (click)="getFilms(filmInputValue)">Search</button>
+
+</div>

@@ -1,3 +1,8 @@
+export interface IFilmSelect {
+  value: string;
+  viewValue: string;
+}
+
 export interface IFilm {
   Title: string,
   Released: string,
