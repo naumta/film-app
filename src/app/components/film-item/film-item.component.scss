@@ -1,0 +1,48 @@
+.film-item-container {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgb(72, 162, 72);
+  margin: 20px;
+  box-shadow: 4px 1px 11px 4px rgba(34, 60, 80, 0.2);
+
+}
+
+.film-item-poster {
+  width: 45%;
+  padding: 10px;
+}
+
+.film-item-poster img {
+  width: 100%;
+  height: 100%;
+}
+
+.film-item-info {
+  width: 55%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.film-item-info-type, .film-item-info-year {
+  font-size: 1.6em;
+}
+
+.film-item-info-title {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.film-item-info-btn {
+  font-size: 1.5em;
+  color: rgb(227, 95, 7);
+  padding: 0.2em;
+
+  &:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+}

@@ -1,6 +1,20 @@
 export interface IFilmSelect {
-  value: string;
-  viewValue: string;
+  value: string,
+  viewValue: string
+}
+
+export interface IResponse {
+  Response: boolean,
+  Search: ISearchFilmInfo[],
+  totalResults: string
+}
+
+export interface ISearchFilmInfo {
+    Poster: string,
+    Title: string,
+    Type: string,
+    Year: number,
+    imdbID: string
 }
 
 export interface IFilm {

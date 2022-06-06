@@ -1,3 +1,12 @@
+.search {
+  width: 20vw;
+  margin: 20px auto;
+  color: rgb(227, 95, 7);
+  font-weight: bold;
+}
+.search h1 {
+  padding-left: 110px;
+}
 .film-search-container {
   width: 30%;
   margin: 10px auto;
@@ -13,7 +22,7 @@
 
 .film-search-title h2, .film-search-type h2 {
   width: 10%;
-  color: rgb(227, 95, 7);;
+  color: rgb(227, 95, 7);
   margin: 10px;
 }
 .example-full-width, .type-form {
@@ -35,4 +44,13 @@
     font-weight: bold;
   }
 
+}
+
+.film-show {
+  width: 95vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+  box-shadow: 4px 4px 8px 0px rgb(135, 243, 135);
 }

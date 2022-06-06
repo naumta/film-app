@@ -1,0 +1,22 @@
+<div class="film-item-container">
+
+    <div class="film-item-poster">
+      <img [src]="film.Poster" alt="poster">
+    </div>
+
+    <div class="film-item-info">
+      <p class="film-item-info-type">{{film.Type}}</p>
+      <p class="film-item-info-title">{{film.Title}}</p>
+      <p class="film-item-info-year">{{film.Year}}</p>
+
+      <button class="film-item-info-btn" (click)="getFilmInfoById()">Details</button>
+
+    </div>
+
+</div>
+
+<div>
+  <app-film-preview [filmDetails]="filmDetails"></app-film-preview>
+</div>
+
+

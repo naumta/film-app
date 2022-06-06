@@ -1,4 +1,8 @@
 <!-- <app-angular-material-example></app-angular-material-example> -->
+<div class="search">
+  <h1>Search:</h1>
+</div>
+
 <div class="film-search-container">
 
   <div class="film-search-title">
@@ -16,7 +20,7 @@
 
     <mat-form-field class="type-form" appearance="fill">
       <mat-label>Film type</mat-label>
-      <mat-select>
+      <mat-select >
         <mat-option *ngFor="let type of types" [value]="type.value">
           {{type.viewValue}}
         </mat-option>
@@ -28,3 +32,10 @@
   <button mat-raised-button (click)="getFilms(filmInputValue)">Search</button>
 
 </div>
+
+<div class="film-show">
+  <app-film-item *ngFor="let film of filmsArray" [film]="film" ></app-film-item>
+</div>
+
+
+

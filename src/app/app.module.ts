@@ -12,11 +12,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
+import { FilmItemComponent } from './components/film-item/film-item.component';
+import { FilmPreviewComponent } from './components/film-preview/film-preview.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AngularMaterialExampleComponent
+    AngularMaterialExampleComponent,
+    FilmItemComponent,
+    FilmPreviewComponent
   ],
   imports: [
     BrowserModule,

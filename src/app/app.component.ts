@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { IFilm, IFilmSelect } from './shared/model/film-app.model';
+import { Component, Input, OnInit } from '@angular/core';
+import { IFilm, IFilmSelect, IResponse, ISearchFilmInfo } from './shared/model/film-app.model';
 import { FilmService } from './shared/service/film.service';
 
 
@@ -11,8 +11,9 @@ import { FilmService } from './shared/service/film.service';
 
 export class AppComponent implements OnInit {
 
-  films: IFilm[] = [];
+  films!: IResponse;
   filmInputValue: string = "";
+  filmsArray: ISearchFilmInfo[] = [];
 
 
   types: IFilmSelect[] = [
@@ -20,6 +21,7 @@ export class AppComponent implements OnInit {
     {value: 'select', viewValue: 'Select'},
     {value: 'episode', viewValue: 'Episode'},
   ];
+
 
   constructor(private filmService: FilmService) {
   }
@@ -29,9 +31,14 @@ export class AppComponent implements OnInit {
 
   getFilms(filmInputValue: string): void {
 
-    this.filmService.getFilmsByTitle(filmInputValue).subscribe((films: IFilm[]) => {
+    this.filmService.getFilmsByTitle(filmInputValue).subscribe((films: IResponse) => {
       this.films = films;
-      console.log(films);
+      this.filmsArray = films.Search;
+      console.log(this.films);
+      console.log(this.filmsArray);
     })
   }
+
+
+
 }
