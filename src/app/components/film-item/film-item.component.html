@@ -9,7 +9,7 @@
       <p class="film-item-info-title">{{film.Title}}</p>
       <p class="film-item-info-year">{{film.Year}}</p>
 
-      <button class="film-item-info-btn" (click)="getFilmInfoById()">Details</button>
+      <button mat-raised-button class="film-item-info-btn" (click)="getFilmInfoById()">Details</button>
 
     </div>
 
@@ -18,5 +18,7 @@
 <div>
   <app-film-preview [filmDetails]="filmDetails"></app-film-preview>
 </div>
+
+
 
 

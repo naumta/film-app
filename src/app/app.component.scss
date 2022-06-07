@@ -5,12 +5,13 @@
   font-weight: bold;
 }
 .search h1 {
-  padding-left: 110px;
+  padding-left: 150px;
 }
 .film-search-container {
   width: 30%;
   margin: 10px auto;
   border: 1px solid rgb(72, 162, 72);
+  box-shadow: 4px 4px 8px 0px rgb(135, 243, 135);
 }
 
 .film-search-title, .film-search-type {
@@ -32,16 +33,19 @@
 }
 
 .film-search-container button {
-  width:80%;
+  width:90%;
   font-size: 1.3em;
   color: rgb(227, 95, 7);
   background-color: rgb(135, 243, 135);
   margin: 20px;
-  margin-left: 40px;
+  margin-left: 1.8em;
+
+  box-shadow: 3px 2px 7px 1px rgb(72, 162, 72);
 
   &:hover {
     cursor: pointer;
     font-weight: bold;
+    box-shadow: 3px 2px 7px 1px rgb(72, 162, 72) inset;
   }
 
 }
@@ -50,7 +54,7 @@
   width: 95vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 20px;
   box-shadow: 4px 4px 8px 0px rgb(135, 243, 135);
 }

@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import { FilmItemComponent } from './components/film-item/film-item.component';
 import { FilmPreviewComponent } from './components/film-preview/film-preview.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { FilmPreviewComponent } from './components/film-preview/film-preview.com
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

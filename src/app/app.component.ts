@@ -14,6 +14,12 @@ export class AppComponent implements OnInit {
   films!: IResponse;
   filmInputValue: string = "";
   filmsArray: ISearchFilmInfo[] = [];
+  filmType: string = "Movie";
+
+  length!: string;
+  pageSize = 10;
+  pageSizeOptions: number[] = [5, 10, 25, 100];
+
 
 
   types: IFilmSelect[] = [
@@ -34,8 +40,10 @@ export class AppComponent implements OnInit {
     this.filmService.getFilmsByTitle(filmInputValue).subscribe((films: IResponse) => {
       this.films = films;
       this.filmsArray = films.Search;
+      this.length = films.totalResults;
       console.log(this.films);
       console.log(this.filmsArray);
+      console.log(this.length);
     })
   }
 

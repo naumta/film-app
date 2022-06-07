@@ -20,8 +20,8 @@
 
     <mat-form-field class="type-form" appearance="fill">
       <mat-label>Film type</mat-label>
-      <mat-select >
-        <mat-option *ngFor="let type of types" [value]="type.value">
+      <mat-select [(ngModel)]="filmType">
+        <mat-option *ngFor="let type of types" [value]="filmType">
           {{type.viewValue}}
         </mat-option>
       </mat-select>
@@ -36,6 +36,12 @@
 <div class="film-show">
   <app-film-item *ngFor="let film of filmsArray" [film]="film" ></app-film-item>
 </div>
+
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>
 
 
 
