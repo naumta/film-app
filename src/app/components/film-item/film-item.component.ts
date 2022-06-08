@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { IFilm, ISearchFilmInfo } from 'src/app/shared/model/film-app.model';
 import { FilmService } from 'src/app/shared/service/film.service';
+import { FilmItemDialogComponent } from '../film-item-dialog/film-item-dialog.component';
 
 
 @Component({
@@ -15,7 +17,7 @@ export class FilmItemComponent implements OnInit {
   filmDetails!: IFilm;
 
 
-  constructor(private filmService: FilmService) { }
+  constructor(private filmService: FilmService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
 
@@ -24,8 +26,13 @@ export class FilmItemComponent implements OnInit {
   getFilmInfoById(): void {
     this.filmService.getFilmsById(this.film.imdbID).subscribe((filmInfo: IFilm) => {
       this.filmDetails = filmInfo;
-
       console.log(this.filmDetails);
+
+      this.dialog.open(FilmItemDialogComponent, {
+        data: this.filmDetails
+      });
+
+
     })
 
   }

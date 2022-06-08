@@ -6,7 +6,7 @@ export interface IFilmSelect {
 export interface IResponse {
   Response: boolean,
   Search: ISearchFilmInfo[],
-  totalResults: string
+  totalResults: number
 }
 
 export interface ISearchFilmInfo {

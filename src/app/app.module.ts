@@ -16,6 +16,8 @@ import { FilmItemComponent } from './components/film-item/film-item.component';
 import { FilmPreviewComponent } from './components/film-preview/film-preview.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { FilmItemDialogComponent } from './components/film-item-dialog/film-item-dialog.component';
+import { FilmPaginatorComponent } from './components/film-paginator/film-paginator.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     AppComponent,
     AngularMaterialExampleComponent,
     FilmItemComponent,
-    FilmPreviewComponent
+    FilmPreviewComponent,
+    FilmItemDialogComponent,
+    FilmPaginatorComponent
   ],
   imports: [
     BrowserModule,

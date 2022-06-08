@@ -16,10 +16,8 @@ export class AppComponent implements OnInit {
   filmsArray: ISearchFilmInfo[] = [];
   filmType: string = "Movie";
 
-  length!: string;
-  pageSize = 10;
-  pageSizeOptions: number[] = [5, 10, 25, 100];
-
+  length!: IResponse[`totalResults`];
+  pageNumber: number = 1;
 
 
   types: IFilmSelect[] = [
@@ -35,15 +33,16 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
-  getFilms(filmInputValue: string): void {
+  getFilms(filmInputValue: string, pageNumber: number): void {
 
-    this.filmService.getFilmsByTitle(filmInputValue).subscribe((films: IResponse) => {
+    this.filmService.getFilmsByTitle(filmInputValue, pageNumber).subscribe((films: IResponse) => {
       this.films = films;
       this.filmsArray = films.Search;
       this.length = films.totalResults;
+      this.pageNumber = pageNumber;
       console.log(this.films);
       console.log(this.filmsArray);
-      console.log(this.length);
+
     })
   }
 

@@ -1,0 +1,56 @@
+<h2>FilmInfo:</h2>
+<div class="film-details-container">
+  <div class="film-details-poster">
+    <img [src]="data?.Poster" alt="poster">
+  </div>
+
+  <div class="film-details-info">
+    <div class="film-details-title">
+      <div>Title:</div>
+      <div>{{data?.Title}}</div>
+    </div>
+
+    <div class="film-details-released">
+      <div>Released:</div>
+      <div>{{data?.Released}}</div>
+    </div>
+
+    <div class="film-details-genre">
+      <div>Genre:</div>
+      <div>{{data?.Genre}}</div>
+    </div>
+
+    <div class="film-details-country">
+      <div>Country:</div>
+      <div>{{data?.Country}}</div>
+    </div>
+
+    <div class="film-details-director">
+      <div>Director:</div>
+      <div>{{data?.Director}}</div>
+    </div>
+
+    <div class="film-details-writer">
+      <div>Writer:</div>
+      <div>{{data?.Writer}}</div>
+    </div>
+
+    <div class="film-details-actors">
+      <div>Actors:</div>
+      <div>{{data?.Actors}}</div>
+    </div>
+
+    <div class="film-details-awards">
+      <div>Awards:</div>
+      <div>{{data?.Awards}}</div>
+    </div>
+
+  </div>
+
+</div>
+
+<mat-dialog-actions align="end">
+
+  <button mat-button mat-dialog-close>Close</button>
+
+</mat-dialog-actions>

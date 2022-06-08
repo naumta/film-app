@@ -14,8 +14,8 @@ export class FilmService {
 
   constructor(private http: HttpClient) { }
 
-  getFilmsByTitle(filmInputValue: string): Observable<IResponse> {
-    return this.http.get<IResponse>(`${API_URL}/?apikey=${API_KEY}&s=${filmInputValue}`);
+  getFilmsByTitle(filmInputValue: string, pageNumber: number): Observable<IResponse> {
+    return this.http.get<IResponse>(`${API_URL}/?apikey=${API_KEY}&s=${filmInputValue}&page=${pageNumber}`);
   }
 
   getFilmsById(imdbID: string): Observable<IFilm> {

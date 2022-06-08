@@ -1,0 +1,54 @@
+h2 {
+  text-align: center;
+}
+.film-details-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgb(72, 162, 72);
+  box-shadow: 6px 4px 13px 2px rgb(72, 162, 72);
+}
+
+.film-details-poster {
+  width: 40%;
+}
+
+.film-details-poster img {
+  padding: 5px;
+}
+.film-details-info {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.film-details-title, .film-details-released, .film-details-genre, .film-details-country, .film-details-director, .film-details-writer, .film-details-actors, .film-details-awards {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.film-details-title div, .film-details-released div, .film-details-genre div, .film-details-country div, .film-details-director div, .film-details-writer div, .film-details-actors div, .film-details-awards div {
+  padding: 5px;
+}
+
+.film-details-title div:first-child, .film-details-released div:first-child, .film-details-genre div:first-child, .film-details-country div:first-child, .film-details-director div:first-child, .film-details-writer div:first-child, .film-details-actors div:first-child, .film-details-awards div:first-child {
+  width: 20%;
+  font-weight: bold;
+}
+
+.film-details-title div:last-child, film-details-released div:last-child, .film-details-genre div:last-child, .film-details-country div:last-child, .film-details-director div:last-child, .film-details-writer div:last-child, .film-details-actors div:last-child, .film-details-awards div:last-child {
+  width: 60%;
+}
+
+.mat-button {
+  color: rgb(227, 95, 7);
+  box-shadow: 3px 2px 7px 1px rgb(72, 162, 72);
+  background-color: rgb(135, 243, 135);
+
+  &:hover {
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 3px 2px 7px 1px rgb(72, 162, 72) inset;
+  }
+}

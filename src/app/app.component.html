@@ -29,7 +29,7 @@
 
   </div>
 
-  <button mat-raised-button (click)="getFilms(filmInputValue)">Search</button>
+  <button mat-raised-button (click)="getFilms(filmInputValue, pageNumber)">Search</button>
 
 </div>
 
@@ -37,11 +37,7 @@
   <app-film-item *ngFor="let film of filmsArray" [film]="film" ></app-film-item>
 </div>
 
-<mat-paginator [length]="100"
-              [pageSize]="10"
-              [pageSizeOptions]="[5, 10, 25, 100]"
-              aria-label="Select page">
-</mat-paginator>
 
+<app-film-paginator [length]="length" [pageNumber]="pageNumber"></app-film-paginator>
 
 
